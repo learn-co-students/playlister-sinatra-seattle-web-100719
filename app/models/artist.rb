@@ -1,5 +1,4 @@
 require_relative './concerns/slugifiable'
-require 'pry'
 
 class Artist < ActiveRecord::Base
     include Slugifiable::InstanceMethods
