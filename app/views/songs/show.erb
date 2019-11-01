@@ -1,0 +1,13 @@
+<head>
+</p>THE ARTIST NAME IS <h2><%= @thisSong.artist.name %></h2></p>
+</p>THE SONG NAME IS <h2><%= @thisSong.name %></h2></p>
+</head>
+<br>
+<% @thisSong.genres.uniq.each do |genre| %>
+        <a href="/genres/<%= genre.slug %>"><%= genre.name %></a>
+        <br>
+<% end %>
+
+<h1> THE ARTIST LINK </h1>
+<a href="/artists/<%= @thisSong.artist.slug %>"><%= @thisSong.artist.name %></a>
+<p><%= @statement %></p>
